@@ -1,4 +1,23 @@
 #%%
+5*0.85
+#%%
+
+# Define given values
+L = 90  # Sound level in dB(A)
+I_0 = 1e-12  # Reference intensity in W/m²
+
+# Calculate intensity in W/m²
+I = I_0 * 10**(L / 10)
+
+# Convert to mW/m² (1 W = 1000 mW)
+I_mW = I * 1000
+
+# Print results
+print(f"Sound intensity in W/m²: {I:.6f} W/m²")
+print(f"Sound intensity in mW/m²: {I_mW:.6f} mW/m²")
+
+
+#%%
 # comparing SWL, SIL, and SPL
 
 import math
@@ -13,6 +32,9 @@ spl_dB = 20*(math.log10(800/2e-5))     # measure of sound relative to a referenc
 print(f'SWL =  {swl_dB}dB \nSIL = {sil_dB}dB \nSPL = {spl_dB:1.1f}dB') # \nSWL_DB_2 = {swl_dB_2} \nPOWER_Watts from SWL_DB_2 = {power_W}')
 
 # SIL == SPL with differences in the reference levels -> for SIL, the reference intensity level Io = 1e-12, while for SPL, the reference pressure level Po = 2e-5
+
+#%%
+
 # %%
 # other relevant equations
 # r = 1 # 1 sqm
