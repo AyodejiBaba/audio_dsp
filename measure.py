@@ -46,7 +46,7 @@ with open(csv_filename, "w", newline="") as file:
     print("📊 Starting measurements...")
 
     # Collect multiple measurements
-    for i in range(10):  # Adjust the number of samples
+    for i in range(3):  # Adjust the number of samples
         timestamp = time.time()  # Get current time
         row_data = [f"{timestamp:.3f}"]  # Format timestamp to 3 decimal places
 
